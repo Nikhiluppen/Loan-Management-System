@@ -1,0 +1,16 @@
+
+---
+
+# 📊 Database Schema
+
+### Tables:
+- customers  
+- loans  
+- payment_schedule  
+
+---
+
+# 🎯 How EMI is Calculated
+
+EMI Formula:
+
