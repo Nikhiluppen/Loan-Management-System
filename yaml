@@ -14,3 +14,34 @@
 
 EMI Formula:
 
+
+Where:
+- P = Principal  
+- r = Monthly interest rate  
+- n = Loan tenure (months)
+
+---
+
+# 🔧 API Endpoints
+
+## Customer
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/customers` | Create Customer |
+| GET | `/api/customers` | List all Customers |
+| GET | `/api/customers/{id}` | Get Customer |
+
+## Loan
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/loans` | Create loan & schedule |
+| GET | `/api/loans/{id}` | Get Loan |
+| GET | `/api/loans/customer/{id}` | Get all loans by customer |
+| GET | `/api/loans/{id}/schedule` | Get EMI schedule |
+| POST | `/api/loans/{loanId}/pay/{installmentNo}` | **Pay EMI (new)** |
+
+---
+
+# 🚀 Run Locally
+
+### 1️⃣ Clone the repo  
