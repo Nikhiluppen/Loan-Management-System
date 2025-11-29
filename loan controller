@@ -1,0 +1,40 @@
+package com.example.Restdemo.controller;
+
+import com.example.Restdemo.dto.LoanRequest;
+import com.example.Restdemo.dto.LoanResponse;
+import com.example.Restdemo.dto.PaymentScheduleResponse;
+import com.example.Restdemo.service.LoanService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/loans")
+@RequiredArgsConstructor
+public class LoanController {
+
+    private final LoanService loanService;
+
+    @PostMapping
+    public ResponseEntity<LoanResponse> createLoan(@Valid @RequestBody LoanRequest request) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(loanService.createLoan(request));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<LoanResponse> getLoan(@PathVariable Long id) {
+        return ResponseEntity.ok(loanService.getLoanById(id));
+    }
+
+    @GetMapping("/customer/{customerId}")
+    public ResponseEntity<List<LoanResponse>> getLoansForCustomer(@PathVariable Long customerId) {
+        return ResponseEntity.ok(loanService.getLoansByCustomer(customerId));
+    }
+
+    @GetMapping("/{loanId}/schedule")
+    public ResponseEntity<List<PaymentScheduleResponse>> getSchedule(@PathVariable Long loanId) {
+        return ResponseEntity.ok(loanService.getScheduleForLoan(loanId));
+    }
+}
