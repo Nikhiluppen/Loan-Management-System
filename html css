@@ -1,0 +1,445 @@
+/* Full page layout */
+.dashboard-root{
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+}
+
+.header-user img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.header-balance {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Transactions */
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.amount-positive {
+  color: green;
+}
+
+.amount-negative {
+  color: red;
+}
+
+/* Quick Contacts */
+.contacts-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-circle {
+  background: #f4f4f4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-circle.selected {
+  background: #1976d2;
+  color: white;
+}
+
+/* Chart block */
+.chart-container {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.side-nav{
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ccc3c3;
+  padding-top: 20px;
+}
+.icon-btn{
+  background: firebrick;
+  width: 200px;
+  height: 40px;
+  /* border-radius: 50%; */
+  display: flex;`
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+
+}
+.sidebar{
+  margin-left: 200px;
+  padding: 20px;
+}
+.logo{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.nav-links{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.nav-links a{
+  text-decoration: none;
+  color: rgb(143, 77, 77);
+  padding: 10px 15px;
+
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(200, 25, 25, 0.08);
+}
+.top-bar{
+  position: fixed;
+  left: 200px;
+  right: 160px;
+  margin-top: -200px;
+  height: 120px;
+  background-color: #77a870;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(200, 25, 25, 0.08);
+}
+.search-container{
+  flex: 1;
+}
+.search-container input{
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+.content-area{
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 60px);
+}
+.row-top{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: rgb(30, 37, 37);
+  margin-top: 100px;
+  background-color: aquamarine;
+}
+.card-small{
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.card-small h3{
+  margin-bottom: 10px;
+}
+.card-small .amount{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card-small .change{
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+.change.positive{
+  color: green;
+}
+.change.negative{
+  color: red;
+}
+.balance-card{
+  background: rgb(192, 137, 137);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.balance-card h3{
+  margin-bottom: 10px;
+  color: white;
+}
+.balance-card .amount{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+.cashback-card{
+  background: rgb(134, 192, 134);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.cashback-card h3{
+  margin-bottom: 10px;
+  color: white;
+}
+.cashback-card .amount{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+.transactions-card{
+  background: rgb(79, 144, 170);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(163, 91, 91, 0.08);
+}
+
+.transfer-card{
+  background: rgb(170, 144, 79);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(163, 91, 91, 0.08);
+}
+.conversion-card{
+  background: rgb(144, 79, 170);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(163, 91, 91, 0.08);
+}
+.quick-transfer-card{
+  background: rgb(79, 170, 144);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(163, 91, 91, 0.08);
+}
+.activity-card{
+  background: rgb(170, 79, 144);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(163, 91, 91, 0.08);
+}
+<div class="dashboard-root">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">m</div>
+
+    <nav class="side-nav">
+
+      <!-- Navigate to Profile -->
+     <button class="icon-btn" routerLink="/dashboard">
+      <p>Dashboard</p>
+  <mat-icon>dashboard</mat-icon>
+</button>
+
+<button class="icon-btn" routerLink="/app.customer-profile">
+  <p>Profile</p>
+  <mat-icon>person</mat-icon>
+</button>
+
+<button class="icon-btn" routerLink="/loan-search">
+  <p>Loan Search</p>
+  <mat-icon>search</mat-icon>
+</button>
+
+<button class="icon-btn" routerLink="/underwriting-dashboard">
+  <p>Underwriting</p>
+  <mat-icon>bar_chart</mat-icon>
+</button>
+
+
+      <button class="icon-btn"><mat-icon>event</mat-icon></button>
+      <button class="icon-btn"><mat-icon>notifications</mat-icon></button>
+       <button class="icon-btn"><mat-icon>settings</mat-icon></button>
+
+    </nav>
+
+
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Header -->
+    <header class="top-bar">
+      <div>
+        <h2>Overview</h2>
+        <p class="welcome">Welcome back, {{ userName }} 👋</p>
+      </div>
+
+      <div class="search-container">
+        <mat-icon>search</mat-icon>
+        <input placeholder="Search" />
+      </div>
+    </header>
+
+    <!-- Row 1 -->
+    <section class="row row-top">
+      <mat-card class="card balance-card">
+        <p class="label">Current Balance</p>
+        <h1 class="balance">${{ currentBalance | number:'1.0-2' }}</h1>
+        <p class="card-number">•••• •••• •••• {{ last4 }}</p>
+
+        <div class="card-footer">
+          <span>Valid thru {{ cardExpiry }}</span>
+          <span class="brand">Mastercard</span>
+        </div>
+      </mat-card>
+
+      <mat-card class="card cashback-card">
+        <div class="cashback-left">
+          <h3>Cashback up to 60% 🎁</h3>
+          <p class="cashback-text">Pay bills and shop to earn rewards.</p>
+          <button mat-raised-button color="primary">Active</button>
+        </div>
+
+        <div class="cashback-right">
+          <div class="avatar-placeholder">🙂</div>
+        </div>
+      </mat-card>
+    </section>
+
+    <!-- Row 2 -->
+    <section class="row row-middle">
+
+      <!-- Transactions -->
+      <mat-card class="card transactions-card">
+        <div class="card-header"><h3>Transactions</h3></div>
+        <mat-divider></mat-divider>
+
+        <div class="transaction" *ngFor="let t of transactions">
+          <div>
+            <p class="tx-title">{{ t.title }}</p>
+            <p class="tx-subtitle">{{ t.subtitle }}</p>
+          </div>
+
+          <div [ngClass]="getAmountClass(t.amount)">
+            {{ t.amount > 0 ? '+' : '' }}{{ t.amount | currency:'USD' }}
+          </div>
+        </div>
+      </mat-card>
+
+      <!-- Transfer -->
+      <mat-card class="card transfer-card">
+        <h3>Transfer</h3>
+        <p class="card-subtext">{{ transferCardNumber }}</p>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" [(ngModel)]="quickAmount" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width"
+                (click)="sendQuickTransfer()">
+          Send Money
+        </button>
+      </mat-card>
+
+      <!-- Conversion -->
+      <mat-card class="card conversion-card">
+        <h3>Conversion</h3>
+
+        <div class="conversion-row">
+          <div>
+            <label>{{ fromCurrency }}</label>
+            <input type="number" [(ngModel)]="fromAmount" />
+          </div>
+
+          <div>
+            <label>{{ toCurrency }}</label>
+            <input type="number"
+                   [value]="fromAmount / rate | number:'1.2-2'"
+                   readonly />
+          </div>
+        </div>
+
+        <p class="rate">Rate {{ rate }} (demo)</p>
+      </mat-card>
+
+    </section>
+
+    <!-- Row 3 -->
+    <section class="row row-bottom">
+
+      <!-- Quick Transfer -->
+      <mat-card class="card quick-transfer-card">
+        <h3>Quick Transfer</h3>
+
+        <div class="avatars">
+          <button *ngFor="let c of contacts"
+                  class="avatar"
+                  [class.selected]="selectedContact?.name === c.name"
+                  (click)="selectContact(c)">
+            <span>{{ c.initials }}</span>
+          </button>
+        </div>
+
+        <p class="card-subtext">
+          {{ selectedContact ? 'To: ' + selectedContact.name : 'Select a recipient' }}
+        </p>
+
+        <button mat-stroked-button color="primary"
+                class="full-width"
+                (click)="sendQuickTransfer()">
+          Send Money
+        </button>
+      </mat-card>
+
+      <!-- Chart -->
+      <mat-card class="card activity-card">
+
+        <div class="card-header">
+          <h3>My Active</h3>
+          <span class="card-subtext">Jan – Aug</span>
+        </div>
+
+        <ngx-charts-line-chart
+          [results]="activityData"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [legend]="showLegend">
+        </ngx-charts-line-chart>
+
+      </mat-card>
+
+    </section>
+
+  </main>
+
+</div>
